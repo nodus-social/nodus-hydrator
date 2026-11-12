@@ -1,0 +1,21 @@
+[package]
+name = "nodus-hydrate"
+description = "The hydrator as a small HTTP service."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "nodus-hydrate"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+axum.workspace = true
+nodus-hydrator = { path = "../hydrator" }
+serde.workspace = true
+serde_json.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true

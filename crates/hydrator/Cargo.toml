@@ -1,0 +1,17 @@
+[package]
+name = "nodus-hydrator"
+description = "Fetch and normalize a federated profile, its posts, graph and thread."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+nodus-server-sdk = { path = "../../../server-sdk/crates/server", features = ["activitypub", "native"] }
+nodus-client-core = { path = "../../../sdk/crates/client-core" }
+nodus-misskey = { path = "../../../sdk/crates/misskey" }
+reqwest.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror = "2"
+urlencoding.workspace = true
