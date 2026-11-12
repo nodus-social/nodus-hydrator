@@ -675,15 +675,31 @@ dependencies = [
 ]
 
 [[package]]
-name = "nodus-activitypub-sdk"
+name = "nodus-activitypub-client"
 version = "0.1.0"
 dependencies = [
+ "nodus-activitypub-core",
  "reqwest",
+ "serde_json",
+ "url",
+ "urlencoding",
+]
+
+[[package]]
+name = "nodus-activitypub-core"
+version = "0.1.0"
+dependencies = [
  "serde",
  "serde_json",
  "thiserror 2.0.21",
- "url",
- "urlencoding",
+]
+
+[[package]]
+name = "nodus-activitypub-sdk"
+version = "0.1.0"
+dependencies = [
+ "nodus-activitypub-client",
+ "nodus-activitypub-core",
 ]
 
 [[package]]
@@ -700,7 +716,7 @@ dependencies = [
 name = "nodus-federation"
 version = "0.1.0"
 dependencies = [
- "nodus-activitypub-sdk",
+ "nodus-activitypub-core",
  "reqwest",
  "serde",
  "serde_json",
